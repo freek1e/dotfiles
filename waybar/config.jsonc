@@ -1,0 +1,99 @@
+{
+  "layer": "bottom",
+  "position": "bottom",
+  "height": 26,
+
+  "modules-left": [
+    "custom/wofi"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "cpu",
+    "memory",
+//  "temperature",
+    "custom/gpu",
+    "clock"
+  ],
+
+  "custom/wofi": {
+  "format": "<b></b>",
+  "tooltip": "Applications",
+  "on-click": "rofi -show drun",
+  "on-click-right": "wlogout"
+
+},
+
+"wlr/taskbar": {
+"format": "{icon}",
+"icon-size": {},
+"icon-theme": "${i_theme}",
+        "spacing": 0,
+"tooltip-format": "{title}",
+"on-click": "activate",
+"on-click-middle": "close",
+"on-click-right": "fullscreen"
+},
+
+
+  /*  / Arch tarzı launcher */
+  "custom-launcher": {
+    "format": "",
+    "tooltip": "Applications",
+    "on-click": "wofi --show drun"
+  },
+
+  /* Workspaces */
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  /* Saat */
+  "clock": {
+    "format": "<b>{:%H:%M}</b>",
+    "tooltip-format": "{:%A %d %B}"
+  },
+
+  /* CPU */
+  "cpu": {
+    "format": "<b>CPU</b> {usage}%",
+    "tooltip": true
+  },
+
+  /* RAM */
+  "memory": {
+    "format": "<b>RAM</b> {}%",
+    "tooltip": true
+  },
+
+  /* GPU / sıcaklık
+     NOT: çoğu sistemde GPU sıcaklığı burada görünür.
+     Görünmezse sorun sende değil, kernel/driver */
+  "temperature": {
+    "format": "<b>GPU</b> {temperatureC}°C",
+    //"exec": "~/.config/waybar/scripts/gpu_usage.sh",
+    "tooltip": true
+  },
+
+ "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu_usage.sh",
+    "interval": 1,
+    "tooltip": true
+  },
+
+
+  /* Ses */
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "󰝟",
+    "on-click": "pavucontrol"
+  }
+}
