@@ -1,0 +1,101 @@
+* {
+font-family: "SF Pro Display", "SF Pro Text", Inter, sans-serif;
+font-size: 13px;
+border: none;
+min-height: 0;
+}
+
+/* Waybar ana pencere */
+window#waybar {
+    background: rgba(5, 5, 5, 0.6);
+    color: #ffffff;
+    border-radius: 0px;
+    margin: 6px 10px 0 10px;
+}
+
+/* Ortak modül stili */
+#custom-launcher,
+#custom-wofi,
+#workspaces,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#clock {
+padding: 4px 10px;
+margin: 4px;
+
+border-radius: 10px;
+}
+
+/* =========================
+ *    TARZI LAUNCHER
+ *   ========================= */
+#custom-launcher {
+font-size: 16px;
+
+padding: 4px 14px;
+margin-left: 6px;
+margin-right: 8px;
+
+background: rgba(255, 255, 255, 0.06);
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#custom-launcher:hover {
+background: rgba(255, 255, 255, 0.14);
+border-color: rgba(255, 255, 255, 0.32);
+}
+
+#custom-launcher:active {
+background: rgba(255, 255, 255, 0.22);
+}
+
+#custom-wofi {
+font-size: 15px;
+
+padding: 4px 14px;
+margin-left: 6px;
+margin-right: 8px;
+
+
+border-radius: 10px;
+border: 0px solid rgba(255, 255, 255, 0.18);
+}
+
+
+
+/* =========================
+ *   WORKSPACES
+ *   ========================= */
+#workspaces {
+margin-left: 4px;
+}
+
+#workspaces button {
+padding: 0 5px;
+color: #888;
+background: transparent;
+}
+
+#workspaces button.active {
+color: #ffffff;
+font-size: 13px;
+}
+
+/* =========================
+ *   CPU / RAM / GPU
+ *   ========================= */
+#cpu,
+#memory,
+#temperature {
+font-size: 12px;
+}
+
+/* =========================
+ *   SES
+ *   ========================= */
+#pulseaudio.muted {
+color: #ff5f57;
+}
